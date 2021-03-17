@@ -15,6 +15,8 @@
 		48D901A92600DEE100D6C859 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48D901A72600DEE100D6C859 /* LaunchScreen.storyboard */; };
 		48D901B42600DEE200D6C859 /* SheetSurferTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D901B32600DEE200D6C859 /* SheetSurferTests.swift */; };
 		48D901BF2600DEE200D6C859 /* SheetSurferUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D901BE2600DEE200D6C859 /* SheetSurferUITests.swift */; };
+		48D901CD260242A500D6C859 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48D901CC260242A500D6C859 /* GoogleService-Info.plist */; };
+		6681EAEECDEF5931668D36EF /* Pods_SheetSurfer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06686EB8BD2FC32B24881BCC /* Pods_SheetSurfer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06686EB8BD2FC32B24881BCC /* Pods_SheetSurfer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SheetSurfer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48D901992600DEDF00D6C859 /* SheetSurfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SheetSurfer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48D9019C2600DEDF00D6C859 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48D9019E2600DEDF00D6C859 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +52,9 @@
 		48D901BA2600DEE200D6C859 /* SheetSurferUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SheetSurferUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48D901BE2600DEE200D6C859 /* SheetSurferUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetSurferUITests.swift; sourceTree = "<group>"; };
 		48D901C02600DEE200D6C859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48D901CC260242A500D6C859 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4A054508288F42E4205D250C /* Pods-SheetSurfer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SheetSurfer.debug.xcconfig"; path = "Target Support Files/Pods-SheetSurfer/Pods-SheetSurfer.debug.xcconfig"; sourceTree = "<group>"; };
+		BA728EFDC54AEBA73A34CCD4 /* Pods-SheetSurfer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SheetSurfer.release.xcconfig"; path = "Target Support Files/Pods-SheetSurfer/Pods-SheetSurfer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6681EAEECDEF5931668D36EF /* Pods_SheetSurfer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36493C7C7C7D0C692CD27EB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06686EB8BD2FC32B24881BCC /* Pods_SheetSurfer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		48D901902600DEDF00D6C859 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +98,8 @@
 				48D901B22600DEE200D6C859 /* SheetSurferTests */,
 				48D901BD2600DEE200D6C859 /* SheetSurferUITests */,
 				48D9019A2600DEDF00D6C859 /* Products */,
+				AD8836ABB056C07B61656CB3 /* Pods */,
+				36493C7C7C7D0C692CD27EB5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +122,7 @@
 				48D901A22600DEE100D6C859 /* Assets.xcassets */,
 				48D901A72600DEE100D6C859 /* LaunchScreen.storyboard */,
 				48D901AA2600DEE100D6C859 /* Info.plist */,
+				48D901CC260242A500D6C859 /* GoogleService-Info.plist */,
 				48D901A42600DEE100D6C859 /* Preview Content */,
 			);
 			path = SheetSurfer;
@@ -136,6 +154,16 @@
 			path = SheetSurferUITests;
 			sourceTree = "<group>";
 		};
+		AD8836ABB056C07B61656CB3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4A054508288F42E4205D250C /* Pods-SheetSurfer.debug.xcconfig */,
+				BA728EFDC54AEBA73A34CCD4 /* Pods-SheetSurfer.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,9 +171,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 48D901C32600DEE200D6C859 /* Build configuration list for PBXNativeTarget "SheetSurfer" */;
 			buildPhases = (
+				B6ABFB7380FB44C187F5E04A /* [CP] Check Pods Manifest.lock */,
 				48D901952600DEDF00D6C859 /* Sources */,
 				48D901962600DEDF00D6C859 /* Frameworks */,
 				48D901972600DEDF00D6C859 /* Resources */,
+				4F0FC5141C6519F26041AD8D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -241,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48D901A92600DEE100D6C859 /* LaunchScreen.storyboard in Resources */,
+				48D901CD260242A500D6C859 /* GoogleService-Info.plist in Resources */,
 				48D901A62600DEE100D6C859 /* Preview Assets.xcassets in Resources */,
 				48D901A32600DEE100D6C859 /* Assets.xcassets in Resources */,
 			);
@@ -261,6 +292,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4F0FC5141C6519F26041AD8D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SheetSurfer/Pods-SheetSurfer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SheetSurfer/Pods-SheetSurfer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SheetSurfer/Pods-SheetSurfer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6ABFB7380FB44C187F5E04A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SheetSurfer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		48D901952600DEDF00D6C859 /* Sources */ = {
@@ -432,6 +505,7 @@
 		};
 		48D901C42600DEE200D6C859 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A054508288F42E4205D250C /* Pods-SheetSurfer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -451,6 +525,7 @@
 		};
 		48D901C52600DEE200D6C859 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA728EFDC54AEBA73A34CCD4 /* Pods-SheetSurfer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
