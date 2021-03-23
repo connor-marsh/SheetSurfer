@@ -3,10 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48061D48260A0D0000C7BA75 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48061D47260A0D0000C7BA75 /* UserInfo.swift */; };
+		48061D4B260A0EA800C7BA75 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48061D4A260A0EA800C7BA75 /* HomeView.swift */; };
+		48061D4D260A0EB700C7BA75 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48061D4C260A0EB700C7BA75 /* LoginView.swift */; };
+		48061D4F260A0F8900C7BA75 /* SignInWithEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48061D4E260A0F8900C7BA75 /* SignInWithEmailView.swift */; };
+		48061D51260A0FB200C7BA75 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48061D50260A0FB200C7BA75 /* ForgotPasswordView.swift */; };
+		48061D53260A0FC800C7BA75 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48061D52260A0FC800C7BA75 /* SignUpView.swift */; };
+		48061D56260A100D00C7BA75 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48061D55260A100D00C7BA75 /* UserViewModel.swift */; };
 		48D9019D2600DEDF00D6C859 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D9019C2600DEDF00D6C859 /* AppDelegate.swift */; };
 		48D9019F2600DEDF00D6C859 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D9019E2600DEDF00D6C859 /* SceneDelegate.swift */; };
 		48D901A12600DEDF00D6C859 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D901A02600DEDF00D6C859 /* ContentView.swift */; };
@@ -38,6 +45,13 @@
 
 /* Begin PBXFileReference section */
 		06686EB8BD2FC32B24881BCC /* Pods_SheetSurfer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SheetSurfer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48061D47260A0D0000C7BA75 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		48061D4A260A0EA800C7BA75 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		48061D4C260A0EB700C7BA75 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		48061D4E260A0F8900C7BA75 /* SignInWithEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithEmailView.swift; sourceTree = "<group>"; };
+		48061D50260A0FB200C7BA75 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		48061D52260A0FC800C7BA75 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		48061D55260A100D00C7BA75 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		48D901992600DEDF00D6C859 /* SheetSurfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SheetSurfer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48D9019C2600DEDF00D6C859 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48D9019E2600DEDF00D6C859 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +105,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		48061D49260A0D1B00C7BA75 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				48D901A02600DEDF00D6C859 /* ContentView.swift */,
+				48061D4A260A0EA800C7BA75 /* HomeView.swift */,
+				48061D52260A0FC800C7BA75 /* SignUpView.swift */,
+				48061D4C260A0EB700C7BA75 /* LoginView.swift */,
+				48061D50260A0FB200C7BA75 /* ForgotPasswordView.swift */,
+				48061D4E260A0F8900C7BA75 /* SignInWithEmailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		48061D54260A0FF700C7BA75 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				48061D55260A100D00C7BA75 /* UserViewModel.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		48D901902600DEDF00D6C859 = {
 			isa = PBXGroup;
 			children = (
@@ -116,9 +151,11 @@
 		48D9019B2600DEDF00D6C859 /* SheetSurfer */ = {
 			isa = PBXGroup;
 			children = (
-				48D9019C2600DEDF00D6C859 /* AppDelegate.swift */,
+				48061D54260A0FF700C7BA75 /* Authentication */,
+				48061D49260A0D1B00C7BA75 /* Views */,
 				48D9019E2600DEDF00D6C859 /* SceneDelegate.swift */,
-				48D901A02600DEDF00D6C859 /* ContentView.swift */,
+				48D9019C2600DEDF00D6C859 /* AppDelegate.swift */,
+				48061D47260A0D0000C7BA75 /* UserInfo.swift */,
 				48D901A22600DEE100D6C859 /* Assets.xcassets */,
 				48D901A72600DEE100D6C859 /* LaunchScreen.storyboard */,
 				48D901AA2600DEE100D6C859 /* Info.plist */,
@@ -160,7 +197,6 @@
 				4A054508288F42E4205D250C /* Pods-SheetSurfer.debug.xcconfig */,
 				BA728EFDC54AEBA73A34CCD4 /* Pods-SheetSurfer.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -340,8 +376,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48061D4D260A0EB700C7BA75 /* LoginView.swift in Sources */,
+				48061D48260A0D0000C7BA75 /* UserInfo.swift in Sources */,
+				48061D51260A0FB200C7BA75 /* ForgotPasswordView.swift in Sources */,
+				48061D56260A100D00C7BA75 /* UserViewModel.swift in Sources */,
 				48D9019D2600DEDF00D6C859 /* AppDelegate.swift in Sources */,
 				48D9019F2600DEDF00D6C859 /* SceneDelegate.swift in Sources */,
+				48061D4F260A0F8900C7BA75 /* SignInWithEmailView.swift in Sources */,
+				48061D4B260A0EA800C7BA75 /* HomeView.swift in Sources */,
+				48061D53260A0FC800C7BA75 /* SignUpView.swift in Sources */,
 				48D901A12600DEDF00D6C859 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
