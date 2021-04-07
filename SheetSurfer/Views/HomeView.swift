@@ -14,17 +14,36 @@ struct HomeView: View {
     @EnvironmentObject var userInfo : UserInfo
     
     var body: some View {
-        Button(action: {
-            try! Auth.auth().signOut()
-            self.userInfo.isUserAuthenticated = .signedOut
-        }) {
-            Text("Sign Out")
-                .frame(width: 200)
-                .padding(.vertical, 15)
-                .background(Color.green)
-                .cornerRadius(8)
-                .foregroundColor(.white)
-        }.padding(.all, 10)
+        
+        NavigationView {
+            VStack {
+                
+                
+                NavigationLink(destination: MusicStorageView()) {
+                    
+                    Text("Your Songs")
+                    
+                }
+                
+                
+                Button(action: {
+                    try! Auth.auth().signOut()
+                    self.userInfo.isUserAuthenticated = .signedOut
+                }) {
+                    Text("Sign Out")
+                        .frame(width: 100)
+                        .padding(.vertical, 15)
+                        .background(Color.green)
+                        .cornerRadius(8)
+                        .foregroundColor(.white)
+                }.padding(.all, 10)
+                
+                .navigationBarTitle("SheetSurfer")
+                .navigationBarItems(trailing:
+                    Text("hi")
+                )
+            }
+        }
     }
 }
 
