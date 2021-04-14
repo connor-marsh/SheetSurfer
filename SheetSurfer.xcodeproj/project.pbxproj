@@ -29,6 +29,7 @@
 		48D901BF2600DEE200D6C859 /* SheetSurferUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D901BE2600DEE200D6C859 /* SheetSurferUITests.swift */; };
 		48D901CD260242A500D6C859 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48D901CC260242A500D6C859 /* GoogleService-Info.plist */; };
 		6681EAEECDEF5931668D36EF /* Pods_SheetSurfer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06686EB8BD2FC32B24881BCC /* Pods_SheetSurfer.framework */; };
+		B4D10F4B260B70CB00C8D539 /* Music_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D10F4A260B70CB00C8D539 /* Music_Controller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		48D901C02600DEE200D6C859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48D901CC260242A500D6C859 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4A054508288F42E4205D250C /* Pods-SheetSurfer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SheetSurfer.debug.xcconfig"; path = "Target Support Files/Pods-SheetSurfer/Pods-SheetSurfer.debug.xcconfig"; sourceTree = "<group>"; };
+		B4D10F4A260B70CB00C8D539 /* Music_Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Music_Controller.swift; sourceTree = "<group>"; };
 		BA728EFDC54AEBA73A34CCD4 /* Pods-SheetSurfer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SheetSurfer.release.xcconfig"; path = "Target Support Files/Pods-SheetSurfer/Pods-SheetSurfer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,6 +170,7 @@
 				48061D49260A0D1B00C7BA75 /* Views */,
 				48D9019E2600DEDF00D6C859 /* SceneDelegate.swift */,
 				48D9019C2600DEDF00D6C859 /* AppDelegate.swift */,
+				B4D10F4A260B70CB00C8D539 /* Music_Controller.swift */,
 				48B908AB261C89BC00B11BA5 /* Song.swift */,
 				48B908AD261C8AB200B11BA5 /* TimeStep.swift */,
 				48061D47260A0D0000C7BA75 /* UserInfo.swift */,
@@ -399,6 +402,7 @@
 				48D9019D2600DEDF00D6C859 /* AppDelegate.swift in Sources */,
 				48D9019F2600DEDF00D6C859 /* SceneDelegate.swift in Sources */,
 				48061D4F260A0F8900C7BA75 /* SignInWithEmailView.swift in Sources */,
+				B4D10F4B260B70CB00C8D539 /* Music_Controller.swift in Sources */,
 				48061D4B260A0EA800C7BA75 /* HomeView.swift in Sources */,
 				48B908AE261C8AB200B11BA5 /* TimeStep.swift in Sources */,
 				48061D53260A0FC800C7BA75 /* SignUpView.swift in Sources */,

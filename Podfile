@@ -12,5 +12,9 @@ target 'SheetSurfer' do
 	pod 'Firebase/Database'
 	pod 'Firebase/Storage'
 	pod 'Firebase/Firestore'
-
+	
+	#note recognition
+	
+	pod 'Beethoven'
+	pod 'Pitchy'
 end
