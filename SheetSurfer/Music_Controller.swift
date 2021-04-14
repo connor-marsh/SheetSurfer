@@ -1,103 +1,37 @@
 //
-//  ViewController.swift
-//  IOS-Swift-AudioRecorder01
+//  Audio_Controller.swift
+//  SheetSurfer
 //
-//  Created by Pooya Hatami on 2018-03-28.
-//  Copyright © 2018 Pooya Hatami. All rights reserved.
+//  Created by Andrew Hill (student LM) on 3/16/21.
+//  Copyright © 2021 Andrew Hill (student LM). All rights reserved.
 //
-//  edited by Andrew Hill to be SwiftUI-compatible (along with some other tweaks) March and April 2020 for use in the SheetSurfer App for CS Seminar
+// to start the engine, do 'pitchEngine.start()'.
+// to stop, it's 'pitchEngine.stop()'.
+// to get the last note played, just use the function and pass it a pitch engine that is currently running.
+
 
 import UIKit
 import AVFoundation
+import Beethoven
+import Pitchy
 
-class Audio_Controller: AVAudioPlayerDelegate , AVAudioRecorderDelegate {
+class Audio_Controller: AVAudioPlayerDelegate , AVAudioRecorderDelegate, SNAudio {
     
-    var soundRecorder : AVAudioRecorder!
-    var soundPlayer : AVAudioPlayer!
+    // Creates a configuration for the input signal tracking (by default).
+    let config = Config(
+      bufferSize: 4096,
+      estimationStrategy: .yin
+    )
     
-    var fileName: String = "audioFile.m4a"
+    let pitchEngine = PitchEngine(config: config, delegate: pitchEngineDelegate)
+    
+    func pitchEngine(_ pitchEngine: PitchEngine, didReceivePitch pitch: Pitch) {
+        noteLabel.text = pitch.note.string
 
-        //these need to be run when the app launches:
-        //setupRecorder()
-        //playBTN.isEnabled = false
-    }
-    
-    //find audio
-    func getDocumentsDirectory() -> URL {
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        return paths[0]
-    }
-    
-    //do this at start
-    func setupRecorder() {
-        let audioFilename = getDocumentsDirectory().appendingPathComponent(fileName)
-        let recordSetting = [ AVFormatIDKey : kAudioFormatAppleLossless,
-                              AVEncoderAudioQualityKey : AVAudioQuality.max.rawValue,
-                              AVEncoderBitRateKey : 320000,
-                              AVNumberOfChannelsKey : 2,
-                              AVSampleRateKey : 44100.2] as [String : Any]
+        let offsetPercentage = pitch.closestOffset.percentage
+        let absOffsetPercentage = abs(offsetPercentage)
+        var note:(String,float) = (pitch.note.string, absOffsetPercentage)
         
-        do {
-            soundRecorder = try AVAudioRecorder(url: audioFilename, settings: recordSetting )
-            soundRecorder.delegate = self
-            soundRecorder.prepareToRecord()
-        } catch {
-            print(error)
-        }
+        return note
     }
-    
-    
-    //run this at the start
-    func setupPlayer() {
-        let audioFilename = getDocumentsDirectory().appendingPathComponent(fileName)
-        do {
-            soundPlayer = try AVAudioPlayer(contentsOf: audioFilename)
-            soundPlayer.delegate = self
-            soundPlayer.prepareToPlay()
-            soundPlayer.volume = 1.0
-        } catch {
-            print(error)
-        }
-    }
-    
-    //check if done
-    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-        playBTN.isEnabled = true
-    }
-    
-    //check if done
-    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        recordBTN.isEnabled = true
-        playBTN.setTitle("Play", for: .normal)
-    }
-    
-    //record sound
-    @IBAction func recordAct(_ sender: Any) {
-        
-        if recordBTN.titleLabel?.text == "Record" {
-            soundRecorder.record()
-            recordBTN.setTitle("Stop", for: .normal)
-            playBTN.isEnabled = false
-        } else {
-            soundRecorder.stop()
-            recordBTN.setTitle("Record", for: .normal)
-            playBTN.isEnabled = false
-        }
-    }
-    
-    //play back sound
-    @IBAction func playAct(_ sender: Any) {
-        
-        if playBTN.titleLabel?.text == "Play" {
-            playBTN.setTitle("Stop", for: .normal)
-            recordBTN.isEnabled = false
-            setupPlayer()
-            soundPlayer.play()
-        } else {
-            soundPlayer.stop()
-            playBTN.setTitle("Play", for: .normal)
-            recordBTN.isEnabled = false
-        }
-    }
-    
 }
