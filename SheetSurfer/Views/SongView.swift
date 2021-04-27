@@ -11,7 +11,60 @@ import SwiftUI
 struct SongView: View {
     @Binding var song : Song
     var body: some View {
-        Text("Damn this song is kinda songy tho").navigationBarTitle(song.title)
+        
+        VStack {
+            
+            Spacer()
+            Text("hi")
+            Spacer()
+            ZStack {
+                
+                VStack {
+                    
+                    Rectangle().frame(width: 500.0, height: 2.0)
+                    Rectangle().foregroundColor(.clear).frame(width:400, height: 3)
+                    Rectangle().frame(width: 500.0, height: 2.0)
+                    Rectangle().foregroundColor(.clear).frame(width:400, height: 3)
+                    Rectangle().frame(width: 500.0, height: 2.0)
+                    Rectangle().foregroundColor(.clear).frame(width:400, height: 3)
+                    Rectangle().frame(width: 500.0, height: 2.0)
+                    Rectangle().foregroundColor(.clear).frame(width:400, height: 3)
+                    Rectangle().frame(width: 500.0, height: 2.0)
+                        
+                    
+                }
+                
+                VStack {
+                    
+                    HStack {
+                        Rectangle().frame(width:10, height:10).cornerRadius(5)
+                        Rectangle().frame(width:10, height:10).cornerRadius(5)
+                    }
+                    HStack {
+                        Rectangle().frame(width:10, height:10).cornerRadius(5)
+                        Rectangle().frame(width:10, height:10).cornerRadius(5)
+                    }
+                    HStack {
+                        Rectangle().frame(width:10, height:10).cornerRadius(5)
+                        Rectangle().frame(width:10, height:10).cornerRadius(5)
+                    }
+                    HStack {
+                        Rectangle().frame(width:10, height:10).cornerRadius(5)
+                        Rectangle().frame(width:10, height:10).cornerRadius(5)
+                    }
+                    
+                    
+                }
+                
+            }
+            
+            Spacer()
+            
+            Text("Damn this song is kinda songy tho")
+            
+            Spacer()
+            
+        }.navigationBarTitle(song.title)
     }
 }
 

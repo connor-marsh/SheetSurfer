@@ -10,4 +10,12 @@ import Foundation
 
 struct TimeStep {
     
+    var length : Int
+    var notes : [Note]
+    
+    init(length : Int = 1, notes : [Note] = []) {
+        self.length = length
+        self.notes = notes
+    }
+    
 }

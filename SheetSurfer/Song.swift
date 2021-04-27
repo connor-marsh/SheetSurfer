@@ -14,12 +14,12 @@ class Song : Identifiable {
     var title : String
     var artist : String
     var genre : String
-    var notes : [TimeStep]
+    var music : [TimeStep]
     
-    init(title : String = "SongTitle", artist : String = "SongArtist", genre : String = "SongGenre", notes : [TimeStep] = [TimeStep()]) {
+    init(title : String = "SongTitle", artist : String = "SongArtist", genre : String = "SongGenre", music : [TimeStep] = []) {
         self.title = title
         self.artist = artist
         self.genre = genre
-        self.notes = notes
+        self.music = music
     }
 }
