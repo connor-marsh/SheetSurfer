@@ -10,57 +10,38 @@ import SwiftUI
 
 struct SongView: View {
     @Binding var song : Song
+    var note:Font=Font.custom("MusiQwik", size: 36)
     var body: some View {
         
         VStack {
             
-            Spacer()
-            Text("hi")
+            Text("Twinkle Twinkle Little Star")
             Spacer()
             ZStack {
                 
                 VStack {
                     
-                    Rectangle().frame(width: 500.0, height: 2.0)
-                    Rectangle().foregroundColor(.clear).frame(width:400, height: 3)
-                    Rectangle().frame(width: 500.0, height: 2.0)
-                    Rectangle().foregroundColor(.clear).frame(width:400, height: 3)
-                    Rectangle().frame(width: 500.0, height: 2.0)
-                    Rectangle().foregroundColor(.clear).frame(width:400, height: 3)
-                    Rectangle().frame(width: 500.0, height: 2.0)
-                    Rectangle().foregroundColor(.clear).frame(width:400, height: 3)
-                    Rectangle().frame(width: 500.0, height: 2.0)
-                        
+                    Text("'&=4P==P=V==V=!==W==W==f==!==U==U==T==T==!").font(note)
+                    
+                    Text("'&==S==S==b=!==V==V==U==U=!==T==T==c=!").font(note)
+                    
+                    Text("'&=V==V=U==U!==T==T==c=!=P===P==V==V=!").font(note)
+                    
+                    Text("'&==W==W==f==!==U==U==T==T=!=S==S==>b=!").font(note)
+                    
+                    Text("'&=4P==P=V==V=!==W==W==f==!==U==U==T==T==!").font(note)
+                    
+                    Text("'&==S==S==b=!==V==V==U==U=!==T==T==c=!").font(note)
+                    
+                    Text("'&=V==V=U==U!==T==T==c=!=P===P==V==V=!").font(note)
+                    
+                    Text("'&==W==W==f==!==U==U==T==T=!=S==S==>b=!").font(note)
                     
                 }
                 
-                VStack {
-                    
-                    HStack {
-                        Rectangle().frame(width:10, height:10).cornerRadius(5)
-                        Rectangle().frame(width:10, height:10).cornerRadius(5)
-                    }
-                    HStack {
-                        Rectangle().frame(width:10, height:10).cornerRadius(5)
-                        Rectangle().frame(width:10, height:10).cornerRadius(5)
-                    }
-                    HStack {
-                        Rectangle().frame(width:10, height:10).cornerRadius(5)
-                        Rectangle().frame(width:10, height:10).cornerRadius(5)
-                    }
-                    HStack {
-                        Rectangle().frame(width:10, height:10).cornerRadius(5)
-                        Rectangle().frame(width:10, height:10).cornerRadius(5)
-                    }
-                    
-                    
-                }
+                
                 
             }
-            
-            Spacer()
-            
-            Text("Damn this song is kinda songy tho")
             
             Spacer()
             
