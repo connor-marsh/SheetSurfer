@@ -30,6 +30,7 @@
 		48D901BF2600DEE200D6C859 /* SheetSurferUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D901BE2600DEE200D6C859 /* SheetSurferUITests.swift */; };
 		48D901CD260242A500D6C859 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48D901CC260242A500D6C859 /* GoogleService-Info.plist */; };
 		6681EAEECDEF5931668D36EF /* Pods_SheetSurfer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06686EB8BD2FC32B24881BCC /* Pods_SheetSurfer.framework */; };
+		B480734A263C521C003F2B3A /* MusiQwik.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4807349263C521C003F2B3A /* MusiQwik.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		48D901C02600DEE200D6C859 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48D901CC260242A500D6C859 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4A054508288F42E4205D250C /* Pods-SheetSurfer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SheetSurfer.debug.xcconfig"; path = "Target Support Files/Pods-SheetSurfer/Pods-SheetSurfer.debug.xcconfig"; sourceTree = "<group>"; };
+		B4807349263C521C003F2B3A /* MusiQwik.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MusiQwik.ttf; path = SheetSurfer/MusiQwik.ttf; sourceTree = SOURCE_ROOT; };
 		BA728EFDC54AEBA73A34CCD4 /* Pods-SheetSurfer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SheetSurfer.release.xcconfig"; path = "Target Support Files/Pods-SheetSurfer/Pods-SheetSurfer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,6 +168,7 @@
 		48D9019B2600DEDF00D6C859 /* SheetSurfer */ = {
 			isa = PBXGroup;
 			children = (
+				B4807349263C521C003F2B3A /* MusiQwik.ttf */,
 				48061D54260A0FF700C7BA75 /* Authentication */,
 				48061D49260A0D1B00C7BA75 /* Views */,
 				48D9019E2600DEDF00D6C859 /* SceneDelegate.swift */,
@@ -326,6 +329,7 @@
 			files = (
 				48D901A92600DEE100D6C859 /* LaunchScreen.storyboard in Resources */,
 				48D901CD260242A500D6C859 /* GoogleService-Info.plist in Resources */,
+				B480734A263C521C003F2B3A /* MusiQwik.ttf in Resources */,
 				48D901A62600DEE100D6C859 /* Preview Assets.xcassets in Resources */,
 				48D901A32600DEE100D6C859 /* Assets.xcassets in Resources */,
 			);
