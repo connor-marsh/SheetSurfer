@@ -15,7 +15,6 @@ struct SongView: View {
         
         VStack {
             
-            Text("Twinkle Twinkle Little Star")
             Spacer()
             ZStack {
                 

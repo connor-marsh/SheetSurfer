@@ -10,7 +10,7 @@ import SwiftUI
 
 struct MusicStorageView: View {
     
-    @State var songs : [Song] = [Song(title: "The Entertainer", artist: "Scott Joplin", genre: "Rag"), Song(title: "Homebound", artist: "Connor Marsh", genre: "Shitty Pop"), Song()]
+    @State var songs : [Song] = [Song(title: "Twinkle Twinkle Little Star", artist: "A. Hill", genre: "Heavy Metal"), Song(title: "Homebound", artist: "Connor Marsh", genre: "Pop"), Song()]
     
     var body: some View {
         ForEach(songs.indices) {i in
