@@ -13,6 +13,16 @@ import SwiftUI
 struct SongView: View {
     @Binding var song : Song
     var note:Font=Font.custom("MusiQwik", size: 36)
+    var a:Color=Color("Blue3")
+    var b:Color=Color.black
+    @State var line1:Color
+    @State var line2:Color
+    @State var line3:Color
+    @State var line4:Color
+    @State var line5:Color
+    @State var line6:Color
+    @State var line7:Color
+    @State var line8:Color
     var body: some View {
         
         
@@ -23,7 +33,7 @@ struct SongView: View {
                 Spacer()
                 Spacer()
                 Button(action: {
-                    //
+                    
                 }) {
                     Image(systemName: "play")
                         .foregroundColor(.white)
@@ -32,7 +42,7 @@ struct SongView: View {
                         .cornerRadius(8)
                 }
                 Button(action: {
-                    //
+                    
                 }) {
                     Image(systemName: "pause")
                         .foregroundColor(.white)
@@ -47,21 +57,21 @@ struct SongView: View {
                 
                 VStack {
                     
-                    Text("'&=4P==P=V==V=!==W==W==f==!==U==U==T==T==!").font(note)
+                    Text("'&=4P==P=V==V=!==W==W==f==!==U==U==T==T==!").font(note).foregroundColor(b)
                     
-                    Text("'&==S==S==b=!==V==V==U==U=!==T==T==c=!").font(note)
+                    Text("'&==S==S==b=!==V==V==U==U=!==T==T==c=!").font(note).foregroundColor(b)
                     
-                    Text("'&=V==V=U==U!==T==T==c=!=P===P==V==V=!").font(note)
+                    Text("'&=V==V=U==U!==T==T==c=!=P===P==V==V=!").font(note).foregroundColor(b)
                     
-                    Text("'&==W==W==f==!==U==U==T==T=!=S==S==>b=!").font(note)
+                    Text("'&==W==W==f==!==U==U==T==T=!=S==S==>b=!").font(note).foregroundColor(b)
                     
-                    Text("'&=4P==P=V==V=!==W==W==f==!==U==U==T==T==!").font(note)
+                    Text("'&=4P==P=V==V=!==W==W==f==!==U==U==T==T==!").font(note).foregroundColor(b)
                     
-                    Text("'&==S==S==b=!==V==V==U==U=!==T==T==c=!").font(note)
+                    Text("'&==S==S==b=!==V==V==U==U=!==T==T==c=!").font(note).foregroundColor(b)
                     
-                    Text("'&=V==V=U==U!==T==T==c=!=P===P==V==V=!").font(note)
+                    Text("'&=V==V=U==U!==T==T==c=!=P===P==V==V=!").font(note).foregroundColor(b)
                     
-                    Text("'&==W==W==f==!==U==U==T==T=!=S==S==>b=!").font(note)
+                    Text("'&==W==W==f==!==U==U==T==T=!=S==S==>b=!").font(note).foregroundColor(b)
                     
                 }
                 
@@ -134,7 +144,6 @@ func findPosition(position: Int, song: [TimeStep], recent: [TimeStep]) -> Int {
     
     return maxIndex
 }
-
 
 var currentPosition = 4
 var recent : [TimeStep] = []
