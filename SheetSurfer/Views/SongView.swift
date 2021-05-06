@@ -15,14 +15,10 @@ struct SongView: View {
     var note:Font=Font.custom("MusiQwik", size: 36)
     var a:Color=Color("Blue3")
     var b:Color=Color.black
-    @State var line1:Color
-    @State var line2:Color
-    @State var line3:Color
-    @State var line4:Color
-    @State var line5:Color
-    @State var line6:Color
-    @State var line7:Color
-    @State var line8:Color
+    
+    
+    
+    @State var lineNum : Int  = -1
     var body: some View {
         
         
@@ -33,7 +29,7 @@ struct SongView: View {
                 Spacer()
                 Spacer()
                 Button(action: {
-                    
+                    self.play()
                 }) {
                     Image(systemName: "play")
                         .foregroundColor(.white)
@@ -42,7 +38,7 @@ struct SongView: View {
                         .cornerRadius(8)
                 }
                 Button(action: {
-                    
+                    self.pause()
                 }) {
                     Image(systemName: "pause")
                         .foregroundColor(.white)
@@ -56,10 +52,76 @@ struct SongView: View {
             ZStack {
                 
                 VStack {
+                    if (lineNum == 0) {
+                        Rectangle().foregroundColor(.orange).frame(width: 300, height: 64).opacity(0.5)
+                    }
+                    else {
+                        Rectangle().foregroundColor(.orange).frame(width: 300, height: 64).opacity(0)
+                    }
                     
-                    Text("'&=4P==P=V==V=!==W==W==f==!==U==U==T==T==!").font(note).foregroundColor(b)
+                    if (lineNum == 1) {
+                        Rectangle().foregroundColor(.orange).frame(width: 300, height: 64).opacity(0.5)
+                    }
+                    else {
+                        Rectangle().foregroundColor(.orange).frame(width: 300, height: 64).opacity(0)
+                    }
                     
-                    Text("'&==S==S==b=!==V==V==U==U=!==T==T==c=!").font(note).foregroundColor(b)
+                    if (lineNum == 2) {
+                        Rectangle().foregroundColor(.orange).frame(width: 300, height: 64).opacity(0.5)
+                    }
+                    else {
+                        Rectangle().foregroundColor(.orange).frame(width: 300, height: 64).opacity(0)
+                    }
+                    
+                    if (lineNum == 3) {
+                        Rectangle().foregroundColor(.orange).frame(width: 300, height: 64).opacity(0.5)
+                    }
+                    else {
+                        Rectangle().foregroundColor(.orange).frame(width: 300, height: 64).opacity(0)
+                    }
+                    
+                    if (lineNum == 4) {
+                        Rectangle().foregroundColor(.orange).frame(width: 300, height: 64).opacity(0.5)
+                    }
+                    else {
+                        Rectangle().foregroundColor(.orange).frame(width: 300, height: 64).opacity(0)
+                    }
+                    
+                    if (lineNum == 5) {
+                        Rectangle().foregroundColor(.orange).frame(width: 300, height: 64).opacity(0.5)
+                    }
+                    else {
+                        Rectangle().foregroundColor(.orange).frame(width: 300, height: 64).opacity(0)
+                    }
+                    
+                    if (lineNum == 6) {
+                        Rectangle().foregroundColor(.orange).frame(width: 300, height: 64).opacity(0.5)
+                    }
+                    else {
+                        Rectangle().foregroundColor(.orange).frame(width: 300, height: 64).opacity(0)
+                    }
+                    
+                    if (lineNum == 7) {
+                        Rectangle().foregroundColor(.orange).frame(width: 300, height: 64).opacity(0.5)
+                    }
+                    else {
+                        Rectangle().foregroundColor(.orange).frame(width: 300, height: 64).opacity(0)
+                    }
+                    
+                    Spacer()
+                    Spacer()
+                    
+                }
+                
+                VStack {
+                    
+                    Text("'&=4P==P=V==V=!==W==W==f==!==U==U==T==T==!").font(note).foregroundColor(b).onTapGesture(count: 1) {
+                        self.lineNum += 1
+                    }
+                    
+                    Text("'&==S==S==b=!==V==V==U==U=!==T==T==c=!").font(note).foregroundColor(b).onTapGesture(count: 1) {
+                        self.lineNum -= 1
+                    }
                     
                     Text("'&=V==V=U==U!==T==T==c=!=P===P==V==V=!").font(note).foregroundColor(b)
                     
@@ -84,69 +146,88 @@ struct SongView: View {
             
         }.navigationBarTitle(song.title)
     }
-}
-
-let A = Note(name: "A", pitch: 0)
-let As = Note(name: "As", pitch: 0)
-let B = Note(name: "B", pitch: 0)
-let C = Note(name: "C", pitch: 0)
-let Cs = Note(name: "Cs", pitch: 0)
-let D = Note(name: "D", pitch: 0)
-let Ds = Note(name: "Ds", pitch: 0)
-let E = Note(name: "E", pitch: 0)
-let F = Note(name: "F", pitch: 0)
-let Fs = Note(name: "Fs", pitch: 0)
-let G = Note(name: "G", pitch: 0)
-let Gs = Note(name: "Gs", pitch: 0)
-
-var twinkleMusic : [TimeStep] = [TimeStep(length: 4, notes: [C]), TimeStep(length: 4, notes: [C]), TimeStep(length: 4, notes: [G]), TimeStep(length: 4, notes: [G]), TimeStep(length: 4, notes: [A]), TimeStep(length: 4, notes: [A]), TimeStep(length: 2, notes: [G]), TimeStep(length: 4, notes: [F]), TimeStep(length: 4, notes: [F]), TimeStep(length: 4, notes: [E]), TimeStep(length: 4, notes: [E]), TimeStep(length: 4, notes: [D]), TimeStep(length: 4, notes: [D]), TimeStep(length: 2, notes: [C]), TimeStep(length: 4, notes: [G]), TimeStep(length: 4, notes: [G]), TimeStep(length: 4, notes: [F]), TimeStep(length: 4, notes: [F]), TimeStep(length: 4, notes: [E]), TimeStep(length: 4, notes: [E]), TimeStep(length: 2, notes: [D]), TimeStep(length: 4, notes: [G]), TimeStep(length: 4, notes: [G]), TimeStep(length: 4, notes: [F]), TimeStep(length: 4, notes: [F]),TimeStep(length: 4, notes: [E]), TimeStep(length: 4, notes: [E]), TimeStep(length: 2, notes: [D]), TimeStep(length: 4, notes: [C]), TimeStep(length: 4, notes: [C]), TimeStep(length: 4, notes: [G]), TimeStep(length: 4, notes: [G]), TimeStep(length: 4, notes: [A]), TimeStep(length: 4, notes: [A]), TimeStep(length: 2, notes: [G])];
-
-
-
-let song = Song(title: "Test", artist: "Me", genre: "N/A", music: twinkleMusic)
-
-func findPosition(position: Int, song: [TimeStep], recent: [TimeStep]) -> Int {
     
-    var maxScore = 0.0
-    var maxIndex = 0
-    for i in 0..<song.count {
-        
-        let diffPosition = i - position
-        
-        var matches = 0
-        //var consecMatches = 0
-        //var maxConsecMatches = 0
-        
-        for J in 0..<recent.count {
-            
-            let j = recent.count - J - 1
-            
-            if i - j >= 0 {
-                if song[i-j].notes[0].name == recent[J].notes[0].name {
-                    matches += 1*(J*J+1)
-                    //consecMatches += 1
-                    //maxConsecMatches = max(consecMatches, maxConsecMatches)
-                    
-                }
-                else {
-                    //consecMatches = 0
-                }
-            }
-            
-        }
-        
-        let score = Double(matches) + Double(song.count - abs(diffPosition))
-        if score > maxScore {
-            maxScore = score
-            maxIndex = i
+    func play() {
+        self.lineNum += 1
+    }
+    
+    func pause() {
+        self.lineNum = -1
+    }
+    
+    func delayWithSeconds(_ seconds: Double, completion: @escaping () -> ()) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+            completion()
         }
     }
     
-    return maxIndex
+    /*let A = Note(name: "A", pitch: 0)
+     let As = Note(name: "As", pitch: 0)
+     let B = Note(name: "B", pitch: 0)
+     let C = Note(name: "C", pitch: 0)
+     let Cs = Note(name: "Cs", pitch: 0)
+     let D = Note(name: "D", pitch: 0)
+     let Ds = Note(name: "Ds", pitch: 0)
+     let E = Note(name: "E", pitch: 0)
+     let F = Note(name: "F", pitch: 0)
+     let Fs = Note(name: "Fs", pitch: 0)
+     let G = Note(name: "G", pitch: 0)
+     let Gs = Note(name: "Gs", pitch: 0)
+     
+     var twinkleMusic : [TimeStep] = [TimeStep(length: 4, notes: [C]), TimeStep(length: 4, notes: [C]), TimeStep(length: 4, notes: [G]), TimeStep(length: 4, notes: [G]), TimeStep(length: 4, notes: [A]), TimeStep(length: 4, notes: [A]), TimeStep(length: 2, notes: [G]), TimeStep(length: 4, notes: [F]), TimeStep(length: 4, notes: [F]), TimeStep(length: 4, notes: [E]), TimeStep(length: 4, notes: [E]), TimeStep(length: 4, notes: [D]), TimeStep(length: 4, notes: [D]), TimeStep(length: 2, notes: [C]), TimeStep(length: 4, notes: [G]), TimeStep(length: 4, notes: [G]), TimeStep(length: 4, notes: [F]), TimeStep(length: 4, notes: [F]), TimeStep(length: 4, notes: [E]), TimeStep(length: 4, notes: [E]), TimeStep(length: 2, notes: [D]), TimeStep(length: 4, notes: [G]), TimeStep(length: 4, notes: [G]), TimeStep(length: 4, notes: [F]), TimeStep(length: 4, notes: [F]),TimeStep(length: 4, notes: [E]), TimeStep(length: 4, notes: [E]), TimeStep(length: 2, notes: [D]), TimeStep(length: 4, notes: [C]), TimeStep(length: 4, notes: [C]), TimeStep(length: 4, notes: [G]), TimeStep(length: 4, notes: [G]), TimeStep(length: 4, notes: [A]), TimeStep(length: 4, notes: [A]), TimeStep(length: 2, notes: [G])];
+     
+     
+     */
+    //let song = Song(title: "Test", artist: "Me", genre: "N/A", music: twinkleMusic)
+    
+    
+    
+    func findPosition(position: Int, song: [TimeStep], recent: [TimeStep]) -> Int {
+        
+        var maxScore = 0.0
+        var maxIndex = 0
+        for i in 0..<song.count {
+            
+            let diffPosition = i - position
+            
+            var matches = 0
+            //var consecMatches = 0
+            //var maxConsecMatches = 0
+            
+            for J in 0..<recent.count {
+                
+                let j = recent.count - J - 1
+                
+                if i - j >= 0 {
+                    if song[i-j].notes[0].name == recent[J].notes[0].name {
+                        matches += 1*(J*J+1)
+                        //consecMatches += 1
+                        //maxConsecMatches = max(consecMatches, maxConsecMatches)
+                        
+                    }
+                    else {
+                        //consecMatches = 0
+                    }
+                }
+                
+            }
+            
+            let score = Double(matches) + Double(song.count - abs(diffPosition))
+            if score > maxScore {
+                maxScore = score
+                maxIndex = i
+            }
+        }
+        
+        return maxIndex
+    }
+    /*
+     var currentPosition = 4
+     var recent : [TimeStep] = []*/
+    
 }
 
-var currentPosition = 4
-var recent : [TimeStep] = []
+
 
 struct SongView_Previews: PreviewProvider {
     static var previews: some View {

@@ -16,6 +16,9 @@ struct SignInWithEmailView: View {
     @Binding var action:LoginView.Action?
     var body: some View {
         VStack {
+            Image("logoImage").resizable().frame(width: 200.0, height: 200.0).cornerRadius(30)
+            Spacer()
+            Spacer()
             TextField("Email Address",
                       text: self.$user.email)
                 .autocapitalization(.none)
@@ -56,6 +59,7 @@ struct SignInWithEmailView: View {
                         .cornerRadius(8)
                         .foregroundColor(.white)
                 }
+                Spacer()
             }
         }
         .padding(.top, 100)
