@@ -13,20 +13,29 @@ struct SongCardView: View {
     @Binding var song : Song
     
     var body: some View {
-        NavigationLink(destination: SongView(song: $song)) {
-            HStack(spacing: 9.0) {
-                Text("\(song.title)")
-                    .font(.title)
-                VStack {
-                    Text("\(song.artist)")
-                    .font(.footnote)
-                    Text("\(song.genre)")
-                    .font(.footnote)
+        ZStack() {
+            Rectangle().foregroundColor(Color("Blue1")).frame(width: 300.0, height: 80.0)
+            NavigationLink(destination: SongView(song: $song)) {
+                HStack(spacing: 9.0) {
+                    Text("\(song.title)")
+                        .font(.title)
+                        //.foregroundColor(Color("Blue1"))
+                        .foregroundColor(.white)
+                    VStack {
+                        Text("\(song.artist)")
+                            .font(.footnote)
+                            .foregroundColor(Color("Blue4"))
+                            //.foregroundColor(.white)
+                        Text("\(song.genre)")
+                            .font(.footnote)
+                            .foregroundColor(Color("Blue3"))
+                            //.foregroundColor(.white)
+                    }
+                    
                 }
+                .padding(.horizontal)
                 
             }
-            .padding(.horizontal)
-            .frame(width: 300.0, height: 80.0)
         }
         
     }
